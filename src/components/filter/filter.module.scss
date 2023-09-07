@@ -1,0 +1,81 @@
+.panel {
+  background-color: #fff;
+  padding: 10px 14px;
+  border-bottom: 1px solid #ededed;
+  border-left: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+}
+.inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+.item {
+  padding: 0 10px;
+}
+.leftCounter {
+  font-size: 16px;
+  font-weight: 300;
+}
+.clear {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 16px;
+  cursor: pointer;
+  text-underline-offset: 5px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -10px;
+  @media (max-width: 576px) {
+    justify-content: space-between;
+  }
+}
+.activity {
+  padding: 0 10px;
+}
+.filterBtn {
+  border-radius: 3px;
+  padding: 3px 7px;
+  font-weight: 300;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+  &:hover {
+    border-color: #ededed;
+  }
+}
+.radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  &:checked + .filterBtn {
+    border-color: #e9d9d8;
+  }
+}
+.filterItem {
+  @media (max-width: 576px) {
+    order: -1;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
